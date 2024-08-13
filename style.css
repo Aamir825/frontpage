@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+/********************************************/
+
+/* Navbar Designing */
+header{
+    width: 100%;
+    padding: 40px 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #5c5c5c;
+    transition: .5s;
+}
+nav ul li a:hover{
+    color: #bbf124;
+}
+nav ul button{
+    padding: 4px 4px;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+}
+nav ul button:hover{
+    background-color: transparent;
+    border: 1px solid #7e7e7e;
+}
+nav ul li .ri-user-line{
+    border: 1px solid #5c5c5c;
+    padding: 4px;
+    border-radius: 50%;
+}
+nav ul .ri-shopping-cart-2-line{
+    background-color: #bbf124;
+    color: #7e7e7e;
+    padding: 6px;
+    border-radius: 50%;
+}
+.toggle{
+    display: none;
+    background: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 4px 8px;
+    border-radius: 50%;
+    color: #bbf124;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .5s;
+}
+.toggle:hover{
+    background-color: #bbf124;
+    color: #474747;
+}
+/****************************************/
+
+/* Hero Designing */
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: -1;
+}
+.hero .col1{
+    flex-basis: 50%;
+}
+.hero .col1 h1{
+    font-size: 2.5rem;
+}
+.hero .col1 p{
+    margin: 20px 0;
+}
+.hero .col1 button{
+    padding: 12px 20px;
+    border: none;
+    background-color: #bbf124;
+    border: 1px solid #bbf124;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+.hero .col1 button:hover{
+    background-color: transparent;
+    border: 1px solid #7e7e7e;
+}
+.hero .col1 button:nth-child(even){
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+}
+.hero .col2{
+    position: relative;
+}
+.hero img{
+    width: 350px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(90%);
+}
+.img-content{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+}
+
+/**************************************************/
+
+/* Gallery Designing */
+.collection{
+    margin-top: 60px;
+}
+.coll-headings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.coll-headings h1{
+    font-size: 2.5rem;
+}
+.coll-tabs{
+    margin: 50px 0;
+}
+.coll-tabs ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+.coll-tabs ul li{
+    background-color: #f3f3f3;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 16px;
+    transition: .5s;
+    cursor: pointer;
+}
+.coll-tabs ul li:hover{
+    background-color: #bbf124;
+}
+.coll-tabs ul .active{
+    background-color: #bbf124;
+}
+.coll-gallery{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.coll-gallery .card{
+    width: 230px;
+    height: 250px;
+}
+.coll-gallery .card.hide{
+    display: none;
+}
+.coll-gallery .img-back{
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 6px;
+}
+.coll-gallery img{
+    width: 100%;
+    object-fit: cover;
+}
+.coll-gallery p{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+.coll-gallery h1{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #474747;
+}
+
+/*********************************/
+
+/* Experience Designing */
+.experience{
+    margin-top: 120px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.experience .col1 img{
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.experience .col2{
+    text-align: right;
+}
+.experience .col2 h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.experience .col2 p{
+    font-size: 18px;
+}
+
+/***************************************/
+
+/* Functionality Designing */
+.functionality{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+    height: auto;
+    overflow: hidden;
+}
+.functionality .col1{
+    padding-left: 100px;
+}
+.functionality .col1 h1{
+    font-size: 2.5rem;
+}
+.functionality .col1 p{
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.functionality .col1 button{
+    padding: 12px 20px;
+    border: none;
+    background-color: #bbf124;
+    border-radius: 10px;
+}
+.functionality .col2 img{
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+}
+/****************************************/
+
+/* Interiors Designing */
+.interiors{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.interiors .head{
+    font-size: 2.5rem;;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.interiors .card{
+    position: relative;
+}
+.interiors .card-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.interiors .two-cards{
+    display: grid;
+    gap: 20px;
+}
+.interiors .card-area img{
+    width: 100%;
+    height: 80vh;
+    border-radius: 20px;
+    filter: brightness(90%);
+    object-fit: cover;
+}
+.interiors .two-cards img{
+    width: 100%;
+    height: 38vh;
+    border-radius: 20px;
+    filter: brightness(90%);
+    object-fit: cover;
+}
+.interiors .card .card-titles{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+}
+.interiors .wcircle{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/****************************************/
+
+/* Unlock Designing */
+.unlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.unlock .col1 img{
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.unlock .col2{
+    text-align: right;
+}
+.unlock .col2 h1{
+    font-size: 2.5rem;
+}
+.unlock .col2 p{
+    margin: 20px 0;
+}
+.unlock .col2 button{
+    padding: 12px 20px;
+    border: none;
+    background-color: #bbf124;
+    border-radius: 10px;
+}
+/***********************************************/
+
+/* Projects Designing */
+.projects{
+    margin-top: 100px;
+}
+.pro-headings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+.pro-headings h1{
+    font-size: 2.5rem;
+}
+
+.pro-cards .card{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-top: 1px solid #7e7e7e
+}
+
+.pro-cards .card .col4{
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.pro-cards .card .col4 img{
+    width: 300px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    text-align: right;
+}
+.pro-cards .card .col2 h1{
+    font-size: 30px;
+}
+.pro-cards .card .col3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro-cards .card .col3 button{
+    border: 1px solid #00af00;
+    color: #00af00;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+/***********************************************/
+
+/* Navbar Designing */
+footer{
+    padding: 10px 10px;
+    border-top: 1px solid #7e7e7e;
+}
+footer p{
+    font-size: 1rem;
+    text-align: center;
+}
+/***********************************************/
+
+/* Media Queries */
+@media(max-width: 1100px){
+    .hero .col1 h1{
+        font-size: 1.4rem;
+    }
+    .coll-gallery .card{
+        margin-bottom: 40px;
+    }
+    .experience .col2 h1{
+        font-size: 2rem;
+    }
+    .experience .col2 p{
+        font-size: 0.7rem;
+    }
+    .functionality .col1 p{
+        font-size: 0.7rem;
+    }
+    .unlock .col2 p{
+        font-size: 0.7rem;
+    }
+    .pro-cards .card .col2 h1{
+        font-size: 1rem;
+    }
+    .pro-cards .card .col2 p{
+        font-size: 0.8rem;
+    }
+    .pro-cards .card .col4 img{
+        width: 100%;
+    }
+}
+@media(max-width: 768px){
+    nav ul{
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        align-items: center;
+        justify-content: center;
+        z-index: 9;
+        border-top-left-radius: 20px;
+        transition: .5s all;
+    }
+    .menus ul{
+        flex-direction: column;
+    }
+    .toggle{
+        display: block;
+    }
+    .show{
+        right: 0;
+    }
+    .hero{
+        gap: 20px;
+    }
+    .hero .col1{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .hero .col1 h1{
+        font-size: 2rem;
+    }
+    .hero .col2{
+        width: 100%;
+    }
+    .hero .col2 img{
+        width: 100%;
+    }
+    .hero .col2 h1{
+        font-size: 1rem;
+    }
+    .hero .col2 p{
+        font-size: 0.9rem;
+    }
+    .coll-headings{
+        text-align: center;
+    }
+    .coll-headings h1{
+        font-size: 2rem;
+    }
+    .coll-tabs{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding: 10px 0;
+    }
+    .coll-gallery img{
+        width: 100%;
+    }
+    .coll-gallery{
+        gap: 90px 10px;
+    }
+    .coll-gallery .card{
+        flex-grow: 1;
+    }
+    .experience .col1{
+        width: 100%;
+    }
+    .experience .col1 img{
+        width: 100%;
+    }
+    .experience .col2{
+        width: 100%;
+    }
+    .experience .col2 h1{
+        font-size: 2rem;
+    }
+    .functionality{
+        gap: 20px;
+    }
+    .functionality .col1{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .functionality .col1 h1{
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+    .functionality .col1 p{
+        font-size: 1rem;
+    }
+    .functionality .col2 img{
+        width: 100%;
+    }
+    .interiors .head{
+        font-size: 2rem;
+    }
+    .interiors .card-area{
+        grid-template-columns: 1fr;
+    }
+    .interiors .card-area img{
+        width: 100%;
+    }
+    .interiors .two-cards img{
+        width: 100%;
+    }
+    .interiors .card .card-titles h1{
+        font-size: 1rem
+    }
+    .interiors .card .card-titles p{
+        font-size: 0.6rem;
+    }
+    .interiors .wcircle{
+        width: 30px;
+        height: 30px;
+    }
+    .unlock .col1{
+        width: 100%;
+    }
+    .unlock .col1 img{
+        width: 100%;
+    }
+    .unlock .col2{
+        width: 100%;
+    }
+    .unlock .col2 h1{
+        font-size: 2rem;
+    }
+    .pro-headings h1{
+        font-size: 2rem;
+    }
+    .pro-cards .card{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pro-cards .card .col4 img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 320px){
+    .coll-gallery .card{
+        margin-bottom: 10px;
+    }
+}
+
+
